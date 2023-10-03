@@ -1,0 +1,114 @@
+<div class="card" (click)="displayName(playerID)">
+    <img src="/assets/{{name}}.jpg" alt="Profile Pic">
+    <div class="card-name">{{ name }}</div>
+    <div class="card-stats">
+        <div class="player-stats">
+            <div>
+                <div>{{ avgMinutes }}</div>
+                Mins
+            </div>
+            <div>
+                <div>{{ avgPoints }}</div>
+                Pts
+            </div>
+            <div>
+                <div>{{ avgFG }}%</div>
+                FG
+            </div>
+            <div>
+                <div>{{ avgRebounds }}</div>
+                Reb
+            </div>
+            <div>
+                <div>{{ avgAssits }}</div>
+                Ast
+            </div>
+        </div>
+    </div>
+</div>
+<div class="player-total-stats" *ngIf="displayTotalStatsDiv" [@inOutAnimation]>
+    <div class="table-label">Total Stats</div>
+    <table border="1|0">
+        <tr>
+            <th>MIN</th>
+            <th>PTS</th>
+            <th>AST</th>
+            <th>OREB</th>
+            <th>DREB</th>
+            <th>STL</th>
+            <th>BLK</th>
+            <th>TOV</th>
+            <th>DPF</th>
+            <th>OPF</th>
+            <th>FTM</th>
+            <th>FTA</th>
+            <th>2PM</th>
+            <th>2PA</th>
+            <th>3PM</th>
+            <th>3PA</th>
+        </tr>
+        <tr>
+            <td>{{ totalStats.minutes }}</td>
+            <td>{{ totalStats.points }}</td>
+            <td>{{ totalStats.assists }}</td>
+            <td>{{ totalStats.offensiveRebounds }}</td>
+            <td>{{ totalStats.defensiveRebounds }}</td>
+            <td>{{ totalStats.steals }}</td>
+            <td>{{ totalStats.blocks }}</td>
+            <td>{{ totalStats.turnovers }}</td>
+            <td>{{ totalStats.defensiveFouls }}</td>
+            <td>{{ totalStats.offensiveFouls }}</td>
+            <td>{{ totalStats.freeThrowsMade }}</td>
+            <td>{{ totalStats.freeThrowsAttempted }}</td>
+            <td>{{ totalStats.twoPointersMade }}</td>
+            <td>{{ totalStats.twoPointersAttempted }}</td>
+            <td>{{ totalStats.threePointersMade }}</td>
+            <td>{{ totalStats.threePointersAttempted }}</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <div class="table-label">Game Stats</div>
+    <table border="1|0" *ngFor="let g of games">
+        <div>{{  g.date }}</div>
+        <tr>
+            <th>Starter</th>
+            <th>MIN</th>
+            <th>PTS</th>
+            <th>AST</th>
+            <th>OREB</th>
+            <th>DREB</th>
+            <th>STL</th>
+            <th>BLK</th>
+            <th>TOV</th>
+            <th>DPF</th>
+            <th>OPF</th>
+            <th>FTM</th>
+            <th>FTA</th>
+            <th>2PM</th>
+            <th>2PA</th>
+            <th>3PM</th>
+            <th>3PA</th>
+        </tr>
+        <tr>
+            <td> {{ g.isStarter }}</td>
+            <td>{{ g.minutes }}</td>
+            <td>{{ g.points }}</td>
+            <td>{{ g.assists }}</td>
+            <td>{{ g.offensiveRebounds }}</td>
+            <td>{{ g.defensiveRebounds }}</td>
+            <td>{{ g.steals }}</td>
+            <td>{{ g.blocks }}</td>
+            <td>{{ g.turnovers }}</td>
+            <td>{{ g.defensiveFouls }}</td>
+            <td>{{ g.offensiveFouls }}</td>
+            <td>{{ g.freeThrowsMade }}</td>
+            <td>{{ g.freeThrowsAttempted }}</td>
+            <td>{{ g.twoPointersMade }}</td>
+            <td>{{ g.twoPointersAttempted }}</td>
+            <td>{{ g.threePointersMade }}</td>
+            <td>{{ g.threePointersAttempted }}</td>
+        </tr>
+    </table>
+</div>

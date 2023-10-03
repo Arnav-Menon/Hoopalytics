@@ -1,0 +1,6 @@
+I decided to create 5 tables: 3 "master" tables and 2 other tables that actually store the information. The 3 master tables are one for Player, Game, and Team, 
+storing basic info such as id and name, or id and date. The Player Stats table stores all the stats for a player for a game, points, assists, steals, etc. 
+They hold references to Game and Player objects. This table also holds a reference to Team, more so for future improvements to display or query by team_id should you choose.
+The last table is Shot_Data, and this holds all the shots a player makes in a game. It holds references to Game and Player via game_id and player_id, respectively.
+Separating Shot_Data and Player_Stats allows us to store multiple shots per player per game. Meaning we can have completely unrelated shot data for game 2 for the same player.
+We are also able to have different player stats for each game because of the separation.

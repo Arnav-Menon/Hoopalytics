@@ -1,0 +1,70 @@
+@import '../../vars.scss';
+
+player-summary-component {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .card-name {
+    font-family: "Lucida Console", "Courier New", monospace;
+    vertical-align: middle;
+    position: absolute;
+    left: 15%;
+    overflow-x: hidden;
+  }
+
+  .card-stats {
+    position: absolute;
+    left: 50%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    width: calc(100% - 55%);
+    float: right;
+    overflow: auto;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 25px;
+    pointer-events: none;
+  }
+
+  .player-stats {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .player-total-stats {
+    margin-bottom: 1%;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  table {
+    margin: auto;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  th, td {
+    border: 1;
+    padding: 0.5em 0.5em;
+    text-align: center;
+  }
+
+  .player-total-stats {
+    display: block;
+    align-items: center;
+  }
+
+  .table-label {
+    display: flexbox;
+    font-family: "Lucida Console", "Courier New", monospace;
+    vertical-align: middle;
+  }
+
+}

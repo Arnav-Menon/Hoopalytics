@@ -1,0 +1,5 @@
+The interface would have a header that displays the player's name, team, and position. It would also have a navigation bar that allows users to switch between different views, such as the overall stats view, the game-by-game stats view, and the shot chart view.
+
+The overall stats view would display the player's basic stats, such as their points, rebounds, assists, and steals. The game-by-game stats view would display the player's stats for each game. The shot chart view would display a map of the court, with different colors indicating whether the player made or missed a shot at that location.
+
+The interface would be built using Angular. Angular is a popular JavaScript framework that is used to create single-page applications. It is a good choice for this project because it is easy to learn and use, and it provides a lot of features that are useful for data visualization.

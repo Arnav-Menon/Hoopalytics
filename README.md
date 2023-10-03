@@ -1,6 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/b8Jjz3kB)
-
-# OKC Technical Project Deliverable
+# Hoopalytics
 
 ### 1. Backend Engineering
 
@@ -33,14 +31,14 @@ In order to complete the Backend Engineering or Frontend Engineering deliverable
 1. Download and install PostgreSQL from https://www.postgresql.org/download/
 2. Ensure PostgreSQL is running, and in a terminal run
     ```
-    createuser okcapplicant --createdb;
-    createdb okc;
+    createuser hooper --createdb;
+    createdb hoops;
     ```
-3. connect to the okc database to grant permissions `psql okc`
+3. connect to the hoops database to grant permissions `psql hoops`
     ```
     create schema app;
-    alter user okcapplicant with password 'thunder';
-    grant all on schema app to okcapplicant;
+    alter user hooper with password 'basketball';
+    grant all on schema app to hooper;
     ```
 
 
@@ -56,8 +54,8 @@ The steps below attempt to install Python version 3.10.1 within your pyenv envir
 ```
 cd root/of/project
 pyenv install 3.10.1
-pyenv virtualenv 3.10.1 okc
-pyenv local okc
+pyenv virtualenv 3.10.1 venv
+pyenv local venv
 eval "$(pyenv init -)" (may or may not be necessary)
 pip install -r backend/requirements.txt
 ```
@@ -90,12 +88,3 @@ cd /path/to/project/frontend
 npm start
 ```
 The frontend should run on http://localhost:4200/. Visit this address to see the app in your browser.
-
-
-# SUBMISSION.md
-Please fill out the SUBMISSION.md file to ensure we have your name attached to the project.
-
-
-# Questions?
-
-Email datasolutions@okcthunder.com
